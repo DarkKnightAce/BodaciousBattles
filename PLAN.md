@@ -29,10 +29,10 @@ It must be updated as tasks are started or completed.
 - [x] Draft `04_COMMAND_SYSTEM.md`.
 
 ## Phase 5: Factions, Units, & Customization Ruleset
-- [ ] Create Unit Creation / Point Cost framework.
-- [ ] Design hooks for modular complexity (e.g., Flying, Teleportation, Magic).
-- [ ] Draft 2-3 sample diverse units (e.g., 1 strong hero vs 10 weak grunts) for testing.
-- [ ] Draft 1-2 scenarios/missions.
+- [x] Create Unit Creation / Point Cost framework.
+- [x] Design hooks for modular complexity (e.g., Flying, Teleportation, Magic).
+- [x] Draft 2-3 sample diverse units (e.g., 1 strong hero vs 10 weak grunts) for testing.
+- [x] Draft 1-2 scenarios/missions.
 
 ## Phase 6: Playtesting & Iteration
 - [ ] Run simulated combats.

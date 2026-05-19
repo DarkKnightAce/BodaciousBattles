@@ -32,6 +32,16 @@ If a model is **Engaged** (occupying the same Zone as an enemy), it cannot make 
 5. **Apply Armor:** Divide the remaining Hits by the target's **Armor** stat (rounding down).
 6. **Deal Wounds:** Apply the final damage.
 
+## The Swarm Attack Mechanic
+Because Armor divides incoming hits on a per-attack basis, heavily armored targets are virtually immune to scattered, weak attacks. To overcome this, infantry must fight as a coordinated unit.
+
+If multiple models from the same unit have Line of Sight to a target (for Ranged Attacks) or are Engaged with the target (for Melee Attacks), they may declare a **Swarm Attack**.
+
+### Resolving a Swarm Attack
+1. **Spend AP:** Each participating model must spend 2 AP simultaneously.
+2. **Pool Dice:** Combine the **Combat (CMB)** stat of all participating models into one single, massive dice pool.
+3. **Roll & Resolve:** Roll this massive pool as a single attack. Because it is resolved as one attack, the target's Parry and Armor are only applied *once* to the grand total of hits, allowing sheer volume to overwhelm thick armor plating.
+
 ## Step-by-Step Combat Example
 > [!NOTE]
 > **The Scenario:** A Cyborg Ninja (CMB: 8) charges into a Zone to engage a Heavy Mech (Dodge: 0, Parry: 0, Armor: 3, Wounds: 6).
