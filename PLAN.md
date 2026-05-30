@@ -34,7 +34,15 @@ It must be updated as tasks are started or completed.
 - [x] Draft 2-3 sample diverse units (e.g., 1 strong hero vs 10 weak grunts) for testing.
 - [x] Draft 1-2 scenarios/missions.
 
-## Phase 6: Playtesting & Iteration
-- [ ] Run simulated combats.
-- [ ] Balance unit costs and test mechanics.
-- [ ] Refine rules phrasing for clarity and edge-cases.
+## Phase 6: Playtesting Prep & Tweaks
+- [x] Rework Unit Creation to use the new **Perk Point** system (points spent on stats, perks spent on abilities).
+- [x] Clarify ranged attack acquisition (must purchase the **Ranged** keyword) and mechanics.
+- [x] Correct point cost math in `01_SAMPLE_UNITS.md` (specifically the Sniper Team math error).
+- [x] Create 3 new medium-sized sample units (3-7 models) to address extreme size bias in playtesting.
+- [x] Log design decisions and math considerations in `RESEARCH_AND_DECISIONS.md`.
+
+## Phase 7: Playtesting & Iteration
+- [x] Run simulated combats with new medium units.
+- [x] Balance unit costs and test mechanics.
+- [x] Refine rules phrasing for clarity and edge-cases.
+

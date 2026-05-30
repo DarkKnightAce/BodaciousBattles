@@ -11,11 +11,10 @@ If a rule is unclear or players disagree on line of sight or measurement, roll a
 - A large handful of six-sided dice (D6s).
 - Extra D6s to use as trackers for Wounds and other effects.
 
-## Dice Mechanics & The "Rule of 4"
-The game uses six-sided dice (D6). The core resolution system is built around the **Rule of 4**.
-- Whenever a model takes an action that requires a roll (like attacking), you will roll a pool of D6s.
-- **Every die that rolls a 4, 5, or 6 is a Success.**
-- Elite or powerful units do not hit on a lower number; instead, they reflect their prowess by rolling *more* dice in their pool.
+## Dice Mechanics & The "Rule of 4" & "Rule of 6"
+The game uses six-sided dice (D6). The core resolution system is built around these two rules:
+- **The Rule of 4 (Base Success):** Whenever a model takes an action that requires a roll (like attacking), you will roll a pool of D6s. By default, **every die that rolls a 4, 5, or 6 is a Success.** Elite or powerful units do not hit on a lower number; instead, they reflect their prowess by rolling *more* dice in their pool.
+- **The Rule of 6 (Maximum Target Value):** Modifiers (like Dodge or Cover) can increase the success number required to hit a model (e.g., from 4+ to 5+ or 6+). However, this success number **can never be modified to be higher than 6+**. A natural roll of a **6** is always a success, ensuring no model is ever mathematically immune to actions.
 
 ## Unit Rule Cards & D6 Trackers
 Every unit in your army requires a **Rule Card** that displays its Unit Profile and any special rules. Because Bodacious Battles allows players to design custom units, you must bring **two copies** of each unit's rule card:

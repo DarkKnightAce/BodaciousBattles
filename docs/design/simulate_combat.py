@@ -2,7 +2,8 @@ import random
 import math
 
 class Unit:
-    def __init__(self, name, cmb, w, dodge, parry, armor, frail=False, activations=1, count=1):
+    def __init__(self, name, cmb, w, dodge, parry, armor, frail=False, activations=1, count=1,
+                 lethal_strike=False, blast=False, combustible=False):
         self.name = name
         self.cmb = cmb
         self.w = w
@@ -14,6 +15,11 @@ class Unit:
         self.activations = activations
         self.count = count # Number of identical models in this unit
         self.current_wounds = [w] * count
+        
+        # New modular abilities
+        self.lethal_strike = lethal_strike
+        self.blast = blast
+        self.combustible = combustible
 
     def is_alive(self):
         return sum(self.current_wounds) > 0
@@ -33,47 +39,95 @@ class Unit:
                 
             if use_swarm:
                 # Swarm Attack: Pool all CMB together into one massive attack
-                hits = 0
+                regular_hits = 0
+                lethal_hits = 0
                 target_number = min(6, 4 + target.dodge)
                 total_cmb = self.cmb * active_models
                 for _ in range(total_cmb):
                     roll = random.randint(1, 6)
-                    if roll >= target_number:
-                        hits += 1
+                    if roll == 6 and self.lethal_strike:
+                        lethal_hits += 1
+                    elif roll >= target_number:
+                        regular_hits += 1
                 
-                if hits > 0:
-                    hits = max(0, hits - target.parry)
-                    if hits > 0 and target.frail:
-                        hits += 1
-                    wounds_dealt = math.floor(hits / target.armor)
-                    if wounds_dealt > 0:
-                        target.take_damage(wounds_dealt)
-                        total_damage_dealt += wounds_dealt
+                # Resolve regular hits
+                wounds_regular = 0
+                if regular_hits > 0:
+                    regular_hits = max(0, regular_hits - target.parry)
+                    if regular_hits > 0 and target.frail:
+                        regular_hits += 1
+                    wounds_regular = math.floor(regular_hits / target.armor)
+                
+                # Resolve lethal hits (ignore Parry and Armor)
+                wounds_lethal = lethal_hits
+                
+                total_wounds = wounds_regular + wounds_lethal
+                
+                if total_wounds > 0:
+                    target.take_damage(total_wounds)
+                    total_damage_dealt += total_wounds
+                    
+                    # Apply Blast splash damage
+                    if self.blast:
+                        self.resolve_blast_splash(target, total_wounds)
             else:
                 # Individual Attacks
                 for i in range(self.count):
                     if self.current_wounds[i] <= 0:
                         continue
-                    hits = 0
+                    regular_hits = 0
+                    lethal_hits = 0
                     target_number = min(6, 4 + target.dodge)
                     for _ in range(self.cmb):
                         roll = random.randint(1, 6)
-                        if roll >= target_number:
-                            hits += 1
+                        if roll == 6 and self.lethal_strike:
+                            lethal_hits += 1
+                        elif roll >= target_number:
+                            regular_hits += 1
                     
-                    if hits > 0:
-                        hits = max(0, hits - target.parry)
-                        if hits > 0 and target.frail:
-                            hits += 1
-                        wounds_dealt = math.floor(hits / target.armor)
-                        if wounds_dealt > 0:
-                            target.take_damage(wounds_dealt)
-                            total_damage_dealt += wounds_dealt
+                    # Resolve regular hits
+                    wounds_regular = 0
+                    if regular_hits > 0:
+                        regular_hits = max(0, regular_hits - target.parry)
+                        if regular_hits > 0 and target.frail:
+                            regular_hits += 1
+                        wounds_regular = math.floor(regular_hits / target.armor)
+                    
+                    # Resolve lethal hits (ignore Parry and Armor)
+                    wounds_lethal = lethal_hits
+                    
+                    total_wounds = wounds_regular + wounds_lethal
+                    if total_wounds > 0:
+                        target.take_damage(total_wounds)
+                        total_damage_dealt += total_wounds
+                        
+                        # Apply Blast splash damage
+                        if self.blast:
+                            self.resolve_blast_splash(target, total_wounds)
                             
             if not target.is_alive():
                 return total_damage_dealt
 
         return total_damage_dealt
+
+    def resolve_blast_splash(self, target, primary_wounds):
+        # Target takes 1 additional wound if Combustible and damaged
+        if target.combustible and primary_wounds > 0:
+            target.take_damage(1)
+            
+        # Blast splash automatically hits all OTHER active models in the zone
+        other_active_models = target.active_models()
+        if other_active_models > 0:
+            splash_targets_count = max(0, other_active_models - 1)
+            for _ in range(splash_targets_count):
+                hits = 1
+                if target.frail:
+                    hits += 1
+                wounds = math.floor(hits / target.armor)
+                if target.combustible and wounds > 0:
+                    wounds += 1
+                if wounds > 0:
+                    target.take_damage(wounds)
 
     def take_damage(self, amount):
         for i in range(self.count):
@@ -121,25 +175,63 @@ def simulate_matchup(unit1_template, unit2_template, iterations=1000, u1_swarm=F
     return u1_wins, u2_wins, draws
 
 if __name__ == "__main__":
-    juggernaut = {"name": "Juggernaut", "cmb": 6, "w": 6, "dodge": 0, "parry": 0, "armor": 3, "activations": 2, "count": 1}
-    sniper_team = {"name": "Sniper Team", "cmb": 4, "w": 2, "dodge": 2, "parry": 0, "armor": 1, "frail": True, "count": 3}
-    grunt_swarm = {"name": "Grunt Swarm", "cmb": 1, "w": 1, "dodge": 0, "parry": 0, "armor": 1, "count": 10} # 10 grunts is 50 pts, let's use 20 for 100pts
-    grunt_swarm_100 = {"name": "Grunt Swarm (20)", "cmb": 1, "w": 1, "dodge": 0, "parry": 0, "armor": 1, "count": 20}
+    juggernaut = {
+        "name": "Juggernaut", "cmb": 8, "w": 6, "dodge": 0, "parry": 0, "armor": 3, 
+        "lethal_strike": True, "activations": 2, "count": 1
+    }
+    sniper_team = {
+        "name": "Sniper Team (2)", "cmb": 4, "w": 2, "dodge": 2, "parry": 0, "armor": 1, 
+        "frail": True, "blast": True, "count": 2
+    }
+    grunt_swarm_100 = {
+        "name": "Grunt Swarm (20)", "cmb": 1, "w": 1, "dodge": 0, "parry": 0, "armor": 1, 
+        "lethal_strike": True, "count": 20
+    }
+    
+    # New Medium-Sized Units (3-7 models)
+    vanguard_commando = {
+        "name": "Vanguard Commando (5)", "cmb": 2, "w": 1, "dodge": 0, "parry": 0, "armor": 1, 
+        "combustible": True, "count": 5
+    }
+    cyborg_striker = {
+        "name": "Cyborg Striker (4)", "cmb": 3, "w": 1, "dodge": 1, "parry": 0, "armor": 1, 
+        "lethal_strike": True, "combustible": True, "count": 4
+    }
+    heavy_specialist = {
+        "name": "Heavy Specialist (5)", "cmb": 2, "w": 2, "dodge": 0, "parry": 0, "armor": 1, 
+        "blast": True, "count": 5
+    }
     
     print("--- 100 Pt Matchups (1000 iterations) ---")
     w1, w2, d = simulate_matchup(juggernaut, sniper_team)
-    print(f"Juggernaut vs Sniper Team: Jugg={w1}, Snipers={w2}, Draws={d}")
+    print(f"Juggernaut vs Sniper Team (2): Jugg={w1}, Snipers={w2}, Draws={d}")
     
-    w1, w2, d = simulate_matchup(juggernaut, grunt_swarm_100, u2_swarm=True)
-    print(f"Juggernaut vs Grunt Swarm (20) [SWARM ATTACK]: Jugg={w1}, Swarm={w2}, Draws={d}")
+    w1, w2, d = simulate_matchup(juggernaut, grunt_swarm_100) # Grunts have Solitary, no swarm attack
+    print(f"Juggernaut vs Grunt Swarm (20): Jugg={w1}, Swarm={w2}, Draws={d}")
 
     w1, w2, d = simulate_matchup(sniper_team, grunt_swarm_100)
-    print(f"Sniper Team vs Grunt Swarm (20): Snipers={w1}, Swarm={w2}, Draws={d}")
+    print(f"Sniper Team (2) vs Grunt Swarm (20): Snipers={w1}, Swarm={w2}, Draws={d}")
     
+    print("\n--- Medium Force Size (3-7 Models) Matchups ---")
+    w1, w2, d = simulate_matchup(vanguard_commando, juggernaut)
+    print(f"Vanguard Commando (5) vs Juggernaut: Commandos={w1}, Jugg={w2}, Draws={d}")
+    
+    w1, w2, d = simulate_matchup(vanguard_commando, grunt_swarm_100)
+    print(f"Vanguard Commando (5) vs Grunt Swarm (20): Commandos={w1}, Swarm={w2}, Draws={d}")
+
+    w1, w2, d = simulate_matchup(cyborg_striker, juggernaut)
+    print(f"Cyborg Striker (4) vs Juggernaut: Strikers={w1}, Jugg={w2}, Draws={d}")
+    
+    w1, w2, d = simulate_matchup(cyborg_striker, grunt_swarm_100)
+    print(f"Cyborg Striker (4) vs Grunt Swarm (20): Strikers={w1}, Swarm={w2}, Draws={d}")
+    
+    w1, w2, d = simulate_matchup(heavy_specialist, juggernaut)
+    print(f"Heavy Specialist (5) vs Juggernaut: Specialists={w1}, Jugg={w2}, Draws={d}")
+    
+    w1, w2, d = simulate_matchup(heavy_specialist, grunt_swarm_100)
+    print(f"Heavy Specialist (5) vs Grunt Swarm (20): Specialists={w1}, Swarm={w2}, Draws={d}")
+
     print("\n--- Point Efficiency Verification ---")
-    # Base baseline unit (5 pts) vs Max Stat unit
-    # Base: AP 4, CMB 1, W 1, Dodge 0, Parry 0, Armor 1
-    # Max: CMB 10 (+45pts), W 10 (+45pts) = 95 pts total (approx 100 pts)
     baseline_20 = {"name": "Baseline (20 models, 100pts)", "cmb": 1, "w": 1, "dodge": 0, "parry": 0, "armor": 1, "count": 20}
     max_damage_boss = {"name": "Max Dmg Boss (~100pts)", "cmb": 10, "w": 10, "dodge": 0, "parry": 0, "armor": 1, "activations": 2, "count": 1}
     max_tank_boss = {"name": "Max Tank Boss (~100pts)", "cmb": 1, "w": 4, "dodge": 0, "parry": 0, "armor": 4, "activations": 2, "count": 1}

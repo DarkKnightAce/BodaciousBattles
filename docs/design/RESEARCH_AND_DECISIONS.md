@@ -55,3 +55,21 @@ To completely eliminate opposed rolls (which slow down gameplay), we are impleme
 
 ### Decision: The Command Card
 - **Rationale:** Continuing the "no custom tokens" design pillar, CP is tracked via D6s placed on a dedicated "Command Card." This consolidates all force-wide rules and resources into one clean, manageable spot off the table.
+
+## Entry 5: Playtesting Prep & Perk Points Rework
+*Date: 2026-05-30*
+
+### Decision: The Perk Points System
+- **Rationale:** Previously, custom abilities directly added or subtracted from the model's Army Points cost. This made point calculations confusing and created weird scaling, such as Sniper Team math errors. By decoupling stats (purchased with Army Points) from abilities (purchased with a secondary Perk Point currency), we create a highly clean and modular build system.
+- **Mechanics:** Models earn Perk Points on a **1:1 ratio** with their total Stat Cost. This means larger, more expensive models naturally have a larger capacity to slot in thematic, complex keywords, making them feel like true heroic characters.
+- **The Special Abilities (SPA) Stat:** We added a dedicated SPA stat (+5 Army Points per level). Each level grants +5 additional Perk Points (on top of the 5 points added to the Stat Cost, for +10 total Perk Points). This gives players a dedicated channel to buy lots of special abilities/keywords without inflating physical stats like Wounds or Armor.
+
+### Decision: Ranged Weapon Acquisition (The Ranged Keyword)
+- **Rationale:** In earlier drafts, CMB represented both melee and ranged attacks automatically. This meant a wild beast or a swordsman could shoot by default, which broke immersion and balance. Ranged combat is now an acquired ability costing **10 Perk Points**. Units must dedicate a portion of their perk pool to shoot, which clearly defines pure melee, pure ranged, and hybrid units.
+
+### Decision: Boss Keyword as a Paid Perk
+- **Rationale:** Under the original passive rules, any model costing over 33 points automatically became a "Boss" and activated twice per round. This restricted player agency and forced tanky but low-activation giants into the Boss role. Decoupling this allows players to choose: they can spend **30 Perk Points** to purchase the Boss keyword, or they can build a 50+ point "golem" that only activates once but has massive base stats.
+
+### Decision: Introducing Medium-Sized Units (3-7 Models)
+- **Rationale:** Simulation data showed that extremes (1 giant Boss or 20 cheap Grunts) dominated matchups, while middle-sized units were poorly represented or tested. We designed three new mid-size sample units (Vanguard Commandos, Cyborg Strikers, and Heavy Support Specialists) ranging from 16 to 25 points each. This creates a healthy testing spectrum (4-6 models per 100-point army) to evaluate tactical flexibility, movement capabilities (Flying, Teleporting), and area-denial (Blast mortars) against the extreme swarms and single boss titans.
+

@@ -4,11 +4,11 @@ Combat in Bodacious Battles is designed to be fast and lethal, relying entirely 
 
 ## Making an Attack
 During a unit's activation, it can spend Action Points (AP) to make attacks against enemy units.
-- A **Ranged Attack** costs **2 AP**.
-- A **Melee Attack** costs **2 AP**.
+- A **Ranged Attack** costs **2 AP** (and requires the **Ranged** keyword).
+- A **Melee Attack** costs **2 AP** (available to all models).
 
 ## Ranged Combat
-If a model is not **Engaged** (occupying the same Zone as an enemy), it can make Ranged attacks.
+If a model is equipped with ranged weaponry (possesses the **Ranged** keyword) and is not **Engaged** (occupying the same Zone as an enemy), it can make Ranged attacks.
 To make a Ranged Attack, the attacker must have Line of Sight to the target. Line of Sight is determined by drawing a conceptual line between the attacker's Zone and the target's Zone. 
 - If this line crosses an **Obscuring** Cover Zone, the attack cannot be made.
 - If the target is standing in a **Light Cover** or **Heavy Cover** Zone, they gain the respective defensive bonuses.
@@ -17,7 +17,8 @@ To make a Ranged Attack, the attacker must have Line of Sight to the target. Lin
 1. **Spend AP:** The attacker spends 2 AP.
 2. **Roll Dice:** The attacker rolls a number of D6s equal to their **Combat (CMB)** stat.
 3. **Calculate Hits:** By default, every die that rolls a **4, 5, or 6** is a Success (a Hit). However, check the target's **Dodge** stat, plus any bonus from Cover.
-   - *Example:* The target has Dodge 0, but is in Light Cover (+1 Dodge). The attacker must now roll 5s or 6s to score a Hit.
+   - **The Rule of 6 (Maximum Target Value):** The target success number can never be modified to be higher than **6+**. A natural roll of a **6** is always a success, regardless of how much Dodge or Cover the target has. No model can ever be mathematically immune to being hit.
+   - *Example:* The target has Dodge 2 and is in Heavy Cover (+1 Dodge). This would normally require a success roll of 7+ to hit. Because of the Rule of 6, the target number is capped, and the attacker still scores hits on rolls of 6.
 4. **Apply Armor:** Take the total number of successful Hits and divide it by the target's **Armor** stat (rounding down). 
 5. **Deal Wounds:** The final number is the amount of Wounds the target takes. Tick down their Wound tracking die.
 
