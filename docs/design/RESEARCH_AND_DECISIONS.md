@@ -73,3 +73,73 @@ To completely eliminate opposed rolls (which slow down gameplay), we are impleme
 ### Decision: Introducing Medium-Sized Units (3-7 Models)
 - **Rationale:** Simulation data showed that extremes (1 giant Boss or 20 cheap Grunts) dominated matchups, while middle-sized units were poorly represented or tested. We designed three new mid-size sample units (Vanguard Commandos, Cyborg Strikers, and Heavy Support Specialists) ranging from 16 to 25 points each. This creates a healthy testing spectrum (4-6 models per 100-point army) to evaluate tactical flexibility, movement capabilities (Flying, Teleporting), and area-denial (Blast mortars) against the extreme swarms and single boss titans.
 
+---
+
+## Entry 6: Base Cost Rework & Attrition/Group System
+*Date: 2026-05-31*
+
+### Decision: Base Cost and Profile Increase
+
+**Problem:** Simulation data confirmed that swarms of ultra-cheap models (5 pts each, 20 per 100pt army) were too effective due to action economy advantage — more activation dice, more bodies on objectives, and high dice volume that overwhelmed Defense Triad math.
+
+**Solution:** Raise the base cost from 5 to **15 points** and increase the base profile from CMB 1 / W 1 to **CMB 3 / W 3**. This achieves three goals:
+1. **Hard cap on spam:** Max swarm size drops from 20 to 6 models per 100 pts.
+2. **Every model is meaningful:** Base CMB 3 means even the cheapest model rolls 3 dice, making individual models feel impactful.
+3. **Fewer activation dice:** Smaller armies mean the bag pull goes faster and single-model bosses have a fairer activation share.
+
+**Math verification:** The 5 → 15 cost change combined with +2 free CMB and +2 free Wounds means most unit costs shifted slightly (Juggernaut 100 → 100 with AP 5 bump, Snipers 50 → 45, etc.). The key metric: 6 baseline models × 15 pts = 90 pts, leaving 10 for force upgrades, versus the old 20 models for 100 pts.
+
+### Decision: Attrition Keyword (Negative, +15 PP)
+
+**Rationale:** Previously, swarm units either fought at full strength until the last model died, or required tedious per-model tracking. Attrition provides a clean, single-die tracking mechanism where a model's combat output degrades as it takes damage. The 3-tier breakpoint system (top/middle/bottom thirds of max Wounds) gives a natural-feeling power curve.
+
+**Mechanics:**
+- Model defines 3 CMB values at thresholds: > 2/3 max, > 1/3 max, ≤ 1/3 max
+- Player always uses the CMB matching current remaining Wounds
+- +15 PP grant reflects the drawback of predictable degradation
+
+### Decision: Group Keyword (Positive, 15 PP, requires Attrition)
+
+**Rationale:** To give swarm players tactical flexibility despite having fewer individual models, Group allows splitting a high-Wound model during activation. The Attrition requirement ensures split pieces are appropriately weaker (each has fewer Wounds → lower CMB tier). This creates a genuine trade-off: more board presence vs. less killing power per piece.
+
+**Mechanics:**
+- Requires Attrition
+- During activation, model splits into 2+ models, dividing current Wounds
+- Each new model inherits Attrition and calculates CMB from its individual Wounds
+
+### Decision: Swarm Attack Removed
+
+**Rationale:** The Swarm Attack mechanic (pooling CMB of multiple models into one attack) existed to help weak units pierce high Armor. With Attrition models starting at higher peak CMB and naturally degrading, Swarm Attack is no longer needed. The new base CMB 3 ensures even cheap models can threaten armored targets without special pooling rules.
+
+### Decision: Solitary Keyword Removed
+
+**Rationale:** Solitary only existed to prevent units from using Swarm Attack. With Swarm Attack removed, Solitary has no mechanical function and is retired.
+
+---
+
+## Entry 7: Critical Point System & Rule of 3
+*Date: 2026-05-31*
+
+### Problem: Invincible Armor
+Simulation data showed that units without Lethal Strike had 0% win probability against Armor 3+ targets (e.g., Vanguard Commandos vs Juggernaut). This created deterministic, uninteresting matchups where certain unit types were mathematically incapable of damaging others.
+
+### Decision: Critical Points (CP) as a Minimum Damage Floor
+
+**Mechanics:**
+- Each natural 6 that is a successful hit generates 1 Critical Point (CP)
+- If an attack deals 0 Wounds after regular damage resolution but generated 2+ CP, the damage is raised to 1
+- This is a minimum floor, not bonus damage — attacks already dealing 1+ Wounds are unaffected
+
+**Rationale:** Using CP as a floor rather than bonus damage specifically helps the units that need it most (low-CMB units facing high Armor) without inflating damage for units that are already effective. The 2 CP threshold means a baseline CMB 3 model has approximately 7.4% chance per attack to trigger the floor — enough to make matchups non-deterministic without trivializing Armor as a stat.
+
+### Decision: Lethal Strike Rewritten to Enhance CP
+
+**Old behavior:** 6s bypass Parry and Armor (melee only, 10 PP)
+**New behavior:** 5s also generate CP (all attacks, 10 PP same cost)
+
+This makes Lethal Strike a force multiplier for the CP system rather than the sole method of bypassing Armor. A model with LS generates CP from 5+ instead of 6-only, roughly doubling its CP output (33% per die vs 17% per die), making the 2 CP threshold reachable at lower CMB values.
+
+### Decision: Rule of 3 (Minimum Pool)
+
+A companion to the existing Rule of 4 and Rule of 6. Every attack pool has a minimum of 3 dice, preventing Attrition or negative keywords from reducing a model to irrelevance. This ensures the CP system has enough dice to work with even for degraded units.
+

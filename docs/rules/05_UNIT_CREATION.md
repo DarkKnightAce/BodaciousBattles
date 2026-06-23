@@ -13,13 +13,13 @@ Every model in your army starts with a base cost and base profile. You then incr
 In this system, **Army Points** are spent strictly on base stats. Special abilities (Keywords) are purchased using a separate currency called **Perk Points**, which models earn based on their stats and choices.
 
 ### Base Cost
-Every single model added to your army has a base cost of **5 Points**. This represents the minimum physical presence of a combatant on the battlefield and prevents players from fielding an infinite number of weak civilians.
+Every single model added to your army has a base cost of **15 Points**. This ensures each model is a meaningful portion of the army budget and prevents cheap spamming.
 
 ### Base Profile (0 Additional Points)
-By paying the base 5 points, the model inherently possesses the following profile:
+By paying the base 15 points, the model inherently possesses the following profile:
 - **Action Points (AP):** 4
-- **Combat (CMB):** 1 (Melee only; Ranged must be purchased as a perk)
-- **Wounds (W):** 1
+- **Combat (CMB):** 3 (Melee only; Ranged must be purchased as a perk)
+- **Wounds (W):** 3
 - **Dodge:** 0
 - **Parry:** 0
 - **Armor:** 1

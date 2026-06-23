@@ -57,7 +57,7 @@ These abilities provide tactical advantages on the battlefield.
 ### Lethal Strike
 - **Cost:** 10 Perk Points
 - **Requirements:** None
-- **Description:** When resolving this model's Melee attacks, successful hits that roll a natural 6 ignore the target's Parry and division by Armor (applying 1 Wound directly).
+- **Description:** This model generates 1 **Critical Point (CP)** from successful hits that roll a natural 5, in addition to the natural 6s that all models count. This makes it easier to reach the 2 CP threshold needed to set an attack's minimum damage to 1.
 - **Represents:** (e.g., energy blades, monomolecular claws, poison coatings, or precision weak-point strikes)
 
 ### Vanguard
@@ -71,6 +71,12 @@ These abilities provide tactical advantages on the battlefield.
 - **Requirements:** None
 - **Description:** If this model does not move during its activation, it gains +1 Armor against the next attack targeting it before its next activation.
 - **Represents:** (e.g., portable energy barriers, deploying stabilizing braces, portable shields, or heavy sandbags)
+
+### Group
+- **Cost:** 15 Perk Points
+- **Requirements:** **Attrition** keyword
+- **Description:** During this model's activation, it may split into 2 or more smaller models placed on the battlefield. Divide its current Wounds among the new models (minimum 1 Wound per model). Each split model retains the **Attrition** keyword and calculates its CMB from its individual Wound count. The original model is removed; each new model activates independently in future rounds.
+- **Represents:** (e.g., a horde dividing to surround the enemy, a command squad breaking into fire teams, or a swarm organism spawning sub-swarms)
 
 ### Medic
 - **Cost:** 15 Perk Points
@@ -96,6 +102,15 @@ These abilities represent physical flaws, cumbersome equipment, or poor training
 - **Description:** Whenever this model suffers hits from an attack, add +1 to the number of successful hits *before* Armor is applied.
 - **Represents:** (e.g., thin armor plating, brittle bones, hollow-point vulnerability, or delicate inner circuitry)
 
+### Attrition
+- **Cost:** Grants +15 Perk Points
+- **Requirements:** None
+- **Description:** This model defines 3 CMB values corresponding to its remaining Wounds. When resolving attacks, use the CMB matching its current Wound threshold:
+  - **Top third** (Wounds > 2/3 of max): peak CMB
+  - **Middle third** (Wounds > 1/3 of max): reduced CMB
+  - **Bottom third** (Wounds ≤ 1/3 of max): lowest CMB
+- **Represents:** (e.g., a swarm whose members are picked off one by one, a battle tank whose weapons systems fail as it takes damage, or a raging beast that weakens as it bleeds)
+
 ### Inaccurate
 - **Cost:** Grants +5 Perk Points
 - **Requirements:** None
@@ -114,8 +129,3 @@ These abilities represent physical flaws, cumbersome equipment, or poor training
 - **Description:** Whenever this model suffers damage from a Blast attack or enters a Hazardous Zone, it suffers 1 additional Wound.
 - **Represents:** (e.g., volatile fuel cells, ammo backpack stockpiles, dry flammable straw, or unstable energy batteries)
 
-### Solitary
-- **Cost:** Grants +5 Perk Points
-- **Requirements:** None
-- **Description:** This model cannot participate in or initiate a Swarm Attack.
-- **Represents:** (e.g., cumbersome/unwieldy weaponry, non-cooperative beast minds, or highly individualistic duelists)

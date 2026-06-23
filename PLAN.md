@@ -46,3 +46,20 @@ It must be updated as tasks are started or completed.
 - [x] Balance unit costs and test mechanics.
 - [x] Refine rules phrasing for clarity and edge-cases.
 
+## Phase 8: Base Cost Rework & Attrition/Group System
+- [x] Increase base cost to 15 pts and base profile to CMB 3 / W 3 in `05_UNIT_CREATION.md`.
+- [x] Add **Attrition** (negative keyword) and **Group** (positive keyword) to `06_MODULAR_ABILITIES.md`.
+- [x] Remove Swarm Attack mechanic from `03_COMBAT.md`; reference Attrition in combat resolution.
+- [x] Log design rationale in `RESEARCH_AND_DECISIONS.md` (Entry 6).
+- [x] Recalculate all sample units in `01_SAMPLE_UNITS.md` with new base cost/profile.
+- [x] Add two Grunt Swarm variants (V1: Attrition+Group, V2: cheapest baseline) for testing.
+- [x] Update `simulate_combat.py` with Attrition support; run matchups.
+- [x] Retire **Solitary** keyword (no longer needed after Swarm Attack removal).
+
+## Phase 9: Critical Point System & Rule of 3
+- [x] Add **Rule of 3** (minimum pool of 3 dice) to `00_CORE_CONCEPTS.md`.
+- [x] Add **Critical Point** generation and minimum damage floor to Ranged and Melee resolution in `03_COMBAT.md`.
+- [x] Rewrite **Lethal Strike** to generate CP on 5+ instead of bypassing armor on 6s.
+- [x] Log design rationale in `RESEARCH_AND_DECISIONS.md` (Entry 7).
+- [x] Update `simulate_combat.py` with CP tracking, Rule of 3 enforcement, and new LS behavior; run matchups.
+
