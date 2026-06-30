@@ -29,6 +29,12 @@ These sample units demonstrate how the formulaic point cost and Perk Point syste
 - **Fortified (10 Perk Points):** Standing still grants +1 Armor against the next incoming attack.
 - **Flying (10 Perk Points):** Ignores Difficult Terrain AP costs (represents crushing through obstacles).
 
+**Command Card Configuration:**
+- **Command Generation Mechanic:** **Inspiring Leadership** (Since the Juggernaut is a solo commander/monster, it counts as its own leader).
+- **Thematic Abilities:**
+  - **Steam Overdrive [3 CP]:** Select a friendly mechanical or vehicle unit. It immediately gains a free Melee Attack action (costs 0 AP), but it suffers 1 Wound at the end of its activation (cannot be reduced by Armor).
+  - **Nanite Reconstruction [3 CP]:** Select a friendly unit. Restore up to 3 lost Wounds to it (tracked by turning its Wound D6 up, not exceeding its maximum Wounds).
+
 *Playstyle Note:* At 100 points, this single model is your entire army. It uses Teleport to close the distance, Fortified to soak damage, and Lethal Strike to tear enemies apart in close combat.
 
 ---
@@ -56,6 +62,12 @@ These sample units demonstrate how the formulaic point cost and Perk Point syste
 - **Sniper (10 Perk Points):** Ignores Light Cover Dodge bonuses.
 - **Vanguard (10 Perk Points):** Performs a free 1-Zone move before the first round starts.
 - **Fortified (10 Perk Points):** Standing still grants +1 Armor (deploying heavy stabilizing tri-pods).
+
+**Command Card Configuration:**
+- **Command Generation Mechanic:** **Strategic Control** (best for holding objective zones covered from afar).
+- **Thematic Abilities:**
+  - **Smoke Screen [3 CP]:** Select an Open Zone. It counts as an Obscuring Cover Zone until the end of the round.
+  - **Overcharge Weapons [2 CP]:** Select a friendly unit. Until the end of the round, its Ranged attacks ignore 1 point of enemy Armor.
 
 *Playstyle Note:* A standard army fields a pair of these marksmen. Use Vanguard to deploy them onto high ground or in Cover, then remain stationary to activate Fortified while bombarding enemy zones with explosive Blast fire.
 
@@ -86,6 +98,12 @@ These sample units demonstrate how the formulaic point cost and Perk Point syste
 - **Middle third** (W 3-2): CMB 3
 - **Bottom third** (W 1): CMB 1
 
+**Command Card Configuration:**
+- **Command Generation Mechanic:** **Swarm Intelligence** (best for horde armies).
+- **Thematic Abilities:**
+  - **Necrotic Resurrection [5 CP]:** Select a destroyed friendly unit. Place it back on the battlefield in an Engaged Zone containing an enemy unit. It immediately makes a Melee attack.
+  - **Alchemical Mutagen [2 CP]:** Select a friendly unit. Until the end of the round, its CMB is increased by 2, but it suffers 1 Wound at the end of the round (cannot be reduced by Armor).
+
 *Playstyle Note:* 3 swarm models each start at CMB 5, fighting as a unified horde. As they take damage, their CMB drops, representing casualties. Use **Group** to split a wounded model into smaller packs for flanking or holding objectives — each split piece calculates its own CMB from its reduced Wounds.
 
 ---
@@ -108,6 +126,12 @@ These sample units demonstrate how the formulaic point cost and Perk Point syste
 
 **Keywords Purchased (10 Perk Points Spent / 5 Left Unused):**
 - **Lethal Strike (10 Perk Points):** Natural 6s in melee ignore Parry and Armor (represents deadly poison-coated daggers).
+
+**Command Card Configuration:**
+- **Command Generation Mechanic:** **Swarm Intelligence** (best for horde armies).
+- **Thematic Abilities:**
+  - **Necrotic Resurrection [5 CP]:** Select a destroyed friendly unit. Place it back on the battlefield in an Engaged Zone containing an enemy unit. It immediately makes a Melee attack.
+  - **Alchemical Mutagen [2 CP]:** Select a friendly unit. Until the end of the round, its CMB is increased by 2, but it suffers 1 Wound at the end of the round (cannot be reduced by Armor).
 
 *Playstyle Note:* 6 baseline models test the floor of the new system. Each has CMB 3 and W 3 at the minimum cost of 15 pts — no Attrition, no Group, no Solitary. This replaces the old 20-model Grunt Swarm as the benchmark for "cheapest possible army."
 
@@ -135,6 +159,12 @@ These sample units demonstrate how the formulaic point cost and Perk Point syste
 - **Flying (10 Perk Points):** Ignores Difficult Terrain AP costs (represents jump-jets).
 - **Vanguard (10 Perk Points):** Performs a free 1-Zone move before the first round starts.
 
+**Command Card Configuration:**
+- **Command Generation Mechanic:** **Strategic Control** (best for mobile, zone-securing units).
+- **Thematic Abilities:**
+  - **Tactical Infiltration [3 CP]:** Select a friendly unit that has not activated yet. Immediately move it 1 Zone. This movement ignores enemy models in its starting Zone (does not cost Fall Back AP).
+  - **Smoke Screen [3 CP]:** Select an Open Zone. It counts as an Obscuring Cover Zone until the end of the round.
+
 *Playstyle Note:* A team of 4 Commandos provides unmatched early-game pressure. Use Vanguard and Flying to seize control of objective zones immediately, but keep them clear of Blast weapons due to their Combustible jetpacks.
 
 ---
@@ -159,6 +189,12 @@ These sample units demonstrate how the formulaic point cost and Perk Point syste
 - **Teleport (15 Perk Points):** Once per game, spend 3 AP to blink to any zone in Line of Sight.
 - **Flying (10 Perk Points):** Agile parkour allows them to ignore Difficult Terrain AP costs.
 - **Lethal Strike (10 Perk Points):** Natural 6s in melee ignore Parry and Armor (represents high-frequency energy blades).
+
+**Command Card Configuration:**
+- **Command Generation Mechanic:** **Bloodlust** (best for highly aggressive close-combat models).
+- **Thematic Abilities:**
+  - **Phase Shift [2 CP]:** Select a friendly unit. Until the end of the round, it gains the **Teleport** keyword.
+  - **Grip of Terror [2 CP]:** Select an enemy unit in Line of Sight of a friendly unit. Until the end of the round, all actions (moving, attacking, etc.) performed by that unit cost 1 additional AP.
 
 *Playstyle Note:* Strikers act as lone-wolf huntsmen, using Teleport and Flying to reach isolated targets and tear them apart with Lethal Strike.
 
@@ -185,5 +221,11 @@ These sample units demonstrate how the formulaic point cost and Perk Point syste
 - **Blast (15 Perk Points):** Ranged attacks generate 1 automatic hit on all other enemy models in the target zone.
 - **Ranged (10 Perk Points):** Armed with heavy rocket mortars.
 - **Fortified (10 Perk Points):** Standing still grants +1 Armor (represents locking stabilizing braces into the ground).
+
+**Command Card Configuration:**
+- **Command Generation Mechanic:** **Strategic Control** (best for defensive, area-denial armies).
+- **Thematic Abilities:**
+  - **Artillery Barrage [3 CP]:** Select a Zone. Until the end of the round, that Zone counts as a Hazardous Zone. Any unit entering that Zone immediately suffers 1 Wound (ignoring Armor).
+  - **Nanite Reconstruction [3 CP]:** Select a friendly unit. Restore up to 3 lost Wounds to it (tracked by turning its Wound D6 up, not exceeding its maximum Wounds).
 
 *Playstyle Note:* 5 Specialists lock down the board. While very slow (Slow keyword), their mortars deal explosive Blast damage, and staying stationary activates Fortified, boosting their resilience against return fire.

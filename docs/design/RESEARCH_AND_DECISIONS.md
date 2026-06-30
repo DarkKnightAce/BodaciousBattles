@@ -143,3 +143,48 @@ This makes Lethal Strike a force multiplier for the CP system rather than the so
 
 A companion to the existing Rule of 4 and Rule of 6. Every attack pool has a minimum of 3 dice, preventing Attrition or negative keywords from reducing a model to irrelevance. This ensures the CP system has enough dice to work with even for degraded units.
 
+---
+
+## Entry 8: Thematic Command Abilities Expansion
+*Date: 2026-06-22*
+
+### Decision: Expand Command Abilities List (12 Options Across Genres)
+- **Problem:** The original rules had only 3 basic examples of Thematic Abilities, offering little diversity for players to build their custom armies. Players building sci-fi, horror, or magical factions needed standard mechanical baselines to reference or adopt.
+- **Solution:** Designed 12 diverse thematic abilities grouped across 6 genres (Sci-Fi, Fantasy, Weird War, Post-Apocalyptic, Gothic Horror, and Steampunk).
+- **Core Design Alignment:**
+  - **No Opposed Rolls:** None of the abilities require target reaction rolls. For example, **Rad-Burst** asks the victim to roll a simple D6 check directly, and **Grip of Terror** applies a flat AP penalty.
+  - **Keyword Synergy:** Leveraging existing keywords like **Teleport** (for **Phase Shift**), **Armor** (for **Overcharge Weapons** and **Arcane Shield**), **Hazardous Zone** (for **Artillery Barrage**), and **Attrition** (for healing units).
+  - **Resource Economy:** Costs are scaled between 1 CP and 5 CP. Higher-impact actions like summoning units or resurrecting dead ones require substantial pools (5 CP), while utility effects (like ignoring cover or gaining net CP) are cheap (1-2 CP) to keep decision-making dynamic.
+
+---
+
+## Entry 9: Critical Point Combat Options Design Rationale
+*Date: 2026-06-22*
+
+### Decision: Expand Critical Point (CP) Options with 6 New Abilities
+- **Problem:** While the minimum damage floor (Ensured Wound) solved the problem of invincible high-Armor units, it offered only one binary use for Critical Points generated during attack rolls. Attacks that naturally dealt damage but rolled multiple 6s had no way to spend their CP, wasting critical successes.
+- **Solution:** Added 6 new combat options for spending CP, offering a range of utility and tactical trade-offs:
+  - **Damage & Armor Manipulation:** *Sunder Armor [1 CP]* offers a cost-effective way to crack medium armor when you have lots of normal hits, while *Critical Strike [3 CP]* rewards rolls that successfully pierce defense with raw extra damage.
+  - **Crowd Control & Movement:** *Shove [2 CP]* utilizes the Zone system to reposition enemies or disengage for free. *Concussive Blow [1 CP]* disrupts the opponent's action economy by draining their AP for the round.
+  - **Status & Area Damage:** *Bleeding Wound [2 CP]* introduces delayed damage tracked with a D6 on their card, and *Sweeping Attack [2 CP]* allows split hits to damage adjacent models without rolling separate attack sequences.
+- **Key Design Principles Maintained:**
+  - **Immediate Resource Use:** These Critical Points remain non-persistent, generating and expiring within a single attack resolution. This avoids the bookkeeping of carrying points across phases or turns.
+  - **Opposed Roll Avoidance:** None of the new options require the defender to roll saves or resistance checks; the attacker spends their generated successes directly to apply the effects, maintaining rapid, one-sided combat resolution.
+
+---
+
+## Entry 10: Sample Army Command System Synergy
+*Date: 2026-06-22*
+
+### Decision: Assign Thematic Command Configurations to Sample Units
+- **Problem:** The newly expanded Command System (specifically CP Generation Mechanics and Thematic Abilities) needed concrete examples of playstyle synergy integrated within the existing sample unit rosters.
+- **Solution:** Assigned specific Command Generation Mechanics and two Thematic Abilities to each of the 7 sample unit/army profiles, creating functional and thematic builds:
+  - **The Juggernaut (Solo Boss):** Assigned **Inspiring Leadership** (allowing the boss to act as its own CP engine) combined with *Steam Overdrive* (for out-of-turn burst melee attacks) and *Nanite Reconstruction* (for critical self-healing to maintain its 100-point presence).
+  - **Sniper Team (Cover Marksmen):** Assigned **Strategic Control** (rewards covering key zones) with *Smoke Screen* (defensive obscurity) and *Overcharge Weapons* (armor piercing sniper fire).
+  - **Grunt Swarms (Horde Swarms):** Assigned **Swarm Intelligence** (scales CP generation with model count, synergizing with *Group* splitting) with *Necrotic Resurrection* (to recycle casualty models) and *Alchemical Mutagen* (for sudden horde combat surges).
+  - **Vanguard Commando (Fast Recon):** Assigned **Strategic Control** (capitalizes on quick Vanguard zone captures) with *Tactical Infiltration* (free repositioning without paying Fall Back costs) and *Smoke Screen* (advance cover).
+  - **Cyborg Striker (Teleporting Assassins):** Assigned **Bloodlust** (rewards surgical kills) with *Phase Shift* (increased blink availability) and *Grip of Terror* (restricting target AP).
+  - **Heavy Support Specialist (Stationary Defense):** Assigned **Strategic Control** (securing areas with mortar fire) with *Artillery Barrage* (creating Hazardous Zones) and *Nanite Reconstruction* (repairing stationary specialists).
+- **Synergy Alignment:** These configurations demonstrate how players can choose mechanics and abilities that mathematically and thematic scale with their army sizes and archetypes (e.g. Swarm Intelligence for high model counts, Inspiring Leadership for single elite bosses).
+
+

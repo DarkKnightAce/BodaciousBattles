@@ -63,3 +63,19 @@ It must be updated as tasks are started or completed.
 - [x] Log design rationale in `RESEARCH_AND_DECISIONS.md` (Entry 7).
 - [x] Update `simulate_combat.py` with CP tracking, Rule of 3 enforcement, and new LS behavior; run matchups.
 
+## Phase 10: Thematic Command Abilities Expansion
+- [x] Add draft notice to rules documents that are missing them.
+- [x] Expand `04_COMMAND_SYSTEM.md` with 12 thematic command abilities.
+- [x] Log design rationale for the new command abilities in `RESEARCH_AND_DECISIONS.md` (Entry 8).
+
+## Phase 11: Critical Point Options Expansion
+- [x] Expand Critical Point combat resolution steps and options in `03_COMBAT.md`.
+- [x] Log design decisions in `RESEARCH_AND_DECISIONS.md` (Entry 9).
+
+## Phase 12: Sample Units Command Configuration
+- [x] Update `docs/design/01_SAMPLE_UNITS.md` with Command Card Configurations for all 7 unit profiles.
+- [x] Log design decisions in `RESEARCH_AND_DECISIONS.md` (Entry 10).
+
+
+
+

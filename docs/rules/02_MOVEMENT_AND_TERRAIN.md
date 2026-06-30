@@ -1,5 +1,7 @@
 # Movement & Terrain
 
+*Draft - Subject to change.*
+
 Bodacious Battles handles movement without the use of tape measures or free-form movement. Instead, the battlefield is broken up into predefined **Zones**.
 
 ## Moving Between Zones
@@ -8,7 +10,7 @@ Because different Zones represent different types of terrain, the AP cost to ent
 
 - **Open Zone:** Costs **2 AP** to enter. (e.g., empty streets, flat fields).
 - **Difficult Zone:** Costs **3 AP** to enter. (e.g., dense brush, steep stairs, rubble).
-- **Hazardous Zone:** Costs **2 AP** to enter. However, when a unit enters this Zone, it immediately suffers 1 Wound (or must roll a specific hazard check if dictated by the scenario). (e.g., pools of acid, burning ground).
+- **Hazardous Zone:** Costs **2 AP** to enter. However, when a unit enters this Zone, it immediately suffers 1 Wound (or must roll a specific hazard check if dictated by the scenario). Ignores Armor. (e.g., pools of acid, burning ground).
 
 > [!TIP]
 > **Example Movement:** A standard marine with 5 AP starts its activation. It spends 2 AP to move into an adjacent Open Zone, leaving it with 3 AP. It cannot move into a Difficult Zone (which requires 3 AP) because it wants to save 2 AP to make a Ranged Attack later in the turn.
